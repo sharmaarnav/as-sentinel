@@ -1,5 +1,5 @@
 resource "azurerm_sentinel_alert_rule_scheduled" "example" {
-  name                       = "${var.prefix}-rulescheduled01"
+  name                       = "${var.prefix}rulescheduled01"
   log_analytics_workspace_id = var.azurerm_log_analytics_solution_id
   display_name               = "${var.prefix}-rulescheduled01"
   severity                   = "High"
