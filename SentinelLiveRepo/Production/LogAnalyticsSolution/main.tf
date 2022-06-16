@@ -12,8 +12,7 @@ data "azurerm_log_analytics_workspace" "example" {
 module "LogAnalyticsSolution" {
   source = "./LogAnalyticsSolution"
   
-  
-  azurerm_log_analytics_solution_name = "${var.prefix}solutionas01"
+  azurerm_log_analytics_solution_name = "${var.prefix}_solutionas01"
   location = var.location
   resource_group_name = data.azurerm_resource_group.examplerg.name
   azurerm_log_analytics_workspace_id = data.azurerm_log_analytics_workspace.example.id
