@@ -3,7 +3,7 @@ terraform {
 }
 
 locals {
-    subscription_id   = "b83ba8f2-ddsdasdsdas-8ea3710e139a"
+    subscription_id   = "b83ba8f2-f3e4-4144-bd58-8ea3710e139a"
 }
 
 inputs = {
@@ -36,8 +36,8 @@ remote_state {
     config = {
         subscription_id = "${local.subscription_id}"
         key = "${path_relative_to_include()}/terraform.tfstate"
-        resource_group_name = "DefaultResourceGroup"
-        storage_account_name = "terragrunt"
+        resource_group_name = "DefaultResourceGroup-EAU"
+        storage_account_name = "terragrunttest001"
         container_name = "environment-prod"
     }
     generate = {
