@@ -1,7 +1,7 @@
 resource "azurerm_sentinel_alert_rule_scheduled" "example" {
   name                       = "${var.prefix}-rulescheduled01"
-  log_analytics_workspace_id = azurerm_log_analytics_solution.example.workspace_resource_id
-  display_name               = "example"
+  log_analytics_workspace_id = var.azurerm_log_analytics_solution_id
+  display_name               = "${var.prefix}-rulescheduled01"
   severity                   = "High"
   query                      = <<QUERY
 AzureActivity |
