@@ -1,5 +1,5 @@
 resource "azurerm_sentinel_automation_rule" "example" {
-  name                       = "56094f72-ac3f-40e7-a0c0-47bd95f70336"
+  name                       = "${var.prefix}-automation-rule"
   log_analytics_workspace_id = azurerm_log_analytics_solution.sentinel.workspace_resource_id
   display_name               = "automation_rule1"
   order                      = 1

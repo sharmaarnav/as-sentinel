@@ -1,6 +1,6 @@
 resource "azurerm_log_analytics_workspace" "example" {
-  name                = "example-workspace"
+  name                = "${var.prefix}-workspace01"
   location            = var.location
-  resource_group_name = azurerm_resource_group.example.name
+  resource_group_name = var.resource_group_name
   sku                 = "PerGB2018"
 }
