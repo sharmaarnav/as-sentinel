@@ -1,7 +1,7 @@
 module "ResourceGroup" {
   source = "./ResourceGroup"
 
-  prefix      = "${var.prefix}-rg"
-  location    =  var.location
+  azurerm_resource_group_name      = "${var.prefix}-rg"
+  location                     =  var.location
 
 }
