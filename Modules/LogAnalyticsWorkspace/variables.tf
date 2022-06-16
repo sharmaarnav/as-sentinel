@@ -1,4 +1,4 @@
 variable "prefix" {}
 variable "location" {}
 variable "resource_group_name" {}
-variable "app_service_plan" {}
+variable "azurerm_log_analytics_workspace" {}

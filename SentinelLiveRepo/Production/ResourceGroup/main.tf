@@ -1,7 +1,7 @@
 module "ResourceGroup" {
   source = "./ResourceGroup"
 
-  prefix      = "${var.prefix}"
+  prefix      = "${var.prefix}-rg"
   location    =  var.location
 
 }
