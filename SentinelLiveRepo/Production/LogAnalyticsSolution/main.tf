@@ -18,3 +18,7 @@ module "LogAnalyticsSolution" {
   azurerm_log_analytics_workspace_id = data.azurerm_log_analytics_workspace.example.id
   azurerm_log_analytics_workspace_name = data.azurerm_log_analytics_workspace.example.name
 }
+
+output "solution_id" {
+  value = azurerm_log_analytics_solution.example.workspace_resource_id  
+}

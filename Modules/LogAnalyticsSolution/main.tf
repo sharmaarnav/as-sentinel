@@ -11,3 +11,7 @@ resource "azurerm_log_analytics_solution" "example" {
     product   = "OMSGallery/SecurityInsights"
   }
 }
+
+output "solution_id" {
+  value = azurerm_log_analytics_solution.example.workspace_resource_id  
+}

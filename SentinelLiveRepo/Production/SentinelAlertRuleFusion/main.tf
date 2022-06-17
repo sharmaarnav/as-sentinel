@@ -10,7 +10,7 @@ data "azurerm_log_analytics_workspace" "example" {
 module "SentinelAlertRuleFusion" {
   source = "./SentinelAlertRuleFusion"
 
-  azurerm_log_analytics_solution_id = data.azurerm_log_analytics_workspace.example.workspace_id
+  azurerm_log_analytics_solution_id = "/subscriptions/${var.subscription_id}/resourceGroups/${data.azurerm_resource_group.examplerg.name}/providers/Microsoft.OperationsManagement/solutions/SecurityInsights(${var.prefix}-workspace-as01)"
   fusion_rule_name = "${var.prefix}fusion-alert-rule"
 
 }
