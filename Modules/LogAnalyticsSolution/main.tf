@@ -6,7 +6,7 @@ resource "azurerm_log_analytics_solution" "example" {
   workspace_name        = var.azurerm_log_analytics_workspace_name
 
   plan {
-    name = var.azurerm_log_analytics_solution_name
+    #name = var.azurerm_log_analytics_solution_name
     publisher = "Microsoft"
     product   = "OMSGallery/SecurityInsights"
   }
