@@ -11,5 +11,6 @@ module "SentinelAlertRuleFusion" {
   source = "./SentinelAlertRuleFusion"
 
   azurerm_log_analytics_solution_id = data.azurerm_log_analytics_solution.example.id
+  fusion_rule_name = "${var.prefix}fusion-alert-rule"
 
 }

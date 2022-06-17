@@ -10,6 +10,6 @@ data "azurerm_log_analytics_solution" "example" {
 module "SentinelAlertRuleAlertScheduled" {
   source = "./SentinelAlertRuleAlertScheduled"
 
-azurerm_log_analytics_solution_id = data.azurerm_log_analytics_solution.example.id
-
+    azurerm_log_analytics_solution_id = data.azurerm_log_analytics_solution.example.id
+    alert_rule_name ="${var.prefix}-rulescheduled01"
 }
