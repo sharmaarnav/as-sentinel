@@ -9,7 +9,7 @@ locals {
 inputs = {
     prefix = "production01"
     location = "australiaeast"
-    subscription_id   = "b83ba8f2-f3e4-4144-bd58-8ea3710e139a"
+    
 }
 
 generate "versions" {

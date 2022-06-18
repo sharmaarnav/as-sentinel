@@ -1,7 +1,16 @@
-#include "root" {
-#  path = find_in_parent_folders()
-#}
-#
-#dependencies {
-#  paths = ["../ResourceGroup", "../LogAnalyticsWorkspace", "../LogAnalyticsSolution" ]
-#}
+include "root" {
+  path = find_in_parent_folders()
+}
+
+dependencies {
+  paths = ["../ResourceGroup", "../LogAnalyticsWorkspace"]
+}
+
+dependency "LogAnalyticsSolution" {
+  config_path = "../LogAnalyticsSolution"
+}
+
+
+inputs = {
+  solution_id = dependency.LogAnalyticsSolution.outputs.solution_id
+}
