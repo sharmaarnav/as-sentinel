@@ -10,7 +10,7 @@ data "azurerm_log_analytics_workspace" "example" {
 module "SentinelAlertRuleAlertScheduled" {
   source = "./SentinelAlertRuleAlertScheduled"
 
-    azurerm_log_analytics_solution_id = "/subscriptions/${var.subscription_id}/resourceGroups/${data.azurerm_resource_group.examplerg.name}/providers/Microsoft.OperationsManagement/solutions/SecurityInsights(${var.prefix}_solutionas01)"
+    azurerm_log_analytics_solution_id = var.solution_id
     alert_rule_name ="${var.prefix}-rulescheduled01"
 }
 
