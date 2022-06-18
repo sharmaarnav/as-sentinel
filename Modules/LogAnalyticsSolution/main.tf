@@ -12,3 +12,6 @@ resource "azurerm_log_analytics_solution" "example" {
   }
 }
 
+output "solution_id" {
+  value = azurerm_log_analytics_solution.example.workspace_resource_id  
+}
