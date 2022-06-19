@@ -1,8 +1,2 @@
-variable "prefix" {}
-variable "location" {}
-variable "resource_group_name" {}
-variable "azurerm_log_analytics_workspace_id" {}
-variable "azurerm_log_analytics_workspace_name" {}
-variable "azurerm_log_analytics_solution_name" {}
+variable "watchlist_name" {}
 variable "azurerm_log_analytics_solution_id" {}
-variable "azurerm_sentinel_watchlist_id" {}

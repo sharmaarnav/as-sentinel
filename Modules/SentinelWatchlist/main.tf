@@ -1,6 +1,7 @@
 resource "azurerm_sentinel_watchlist" "example" {
-  name                       = "${var.prefix}-watchlist"
+  name                       = var.watchlist_name
   log_analytics_workspace_id = var.azurerm_log_analytics_solution_id
-  display_name               = "${var.prefix}-watchlist"
+  display_name               = var.watchlist_name
   item_search_key            = "Key"
 }
+

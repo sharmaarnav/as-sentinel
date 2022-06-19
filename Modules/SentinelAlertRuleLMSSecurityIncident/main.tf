@@ -1,7 +1,7 @@
 resource "azurerm_sentinel_alert_rule_ms_security_incident" "example" {
-  name                       = "${var.prefix}-ms-security-incident-alert-rule"
-  log_analytics_workspace_id = azurerm_log_analytics_solution.example.workspace_resource_id
+  name                       = var.security_incident_rule_name
+  log_analytics_workspace_id = var.azurerm_log_analytics_solution_id
   product_filter             = "Microsoft Cloud App Security"
-  display_name               = "${var.prefix}-ms-security-incident-alert-rule"
+  display_name               = var.security_incident_rule_name
   severity_filter            = ["High"]
 }
