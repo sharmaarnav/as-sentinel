@@ -40,7 +40,7 @@ remote_state {
         key = "${path_relative_to_include()}/terraform.tfstate"
         resource_group_name = "DefaultResourceGroup-EAU"
         storage_account_name = "terragrunttest001"
-        container_name = "environment-prod"
+        container_name = "environment-prod2"
     }
     generate = {
         path      = "backend.tf"

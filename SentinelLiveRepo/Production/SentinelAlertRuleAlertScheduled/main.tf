@@ -16,3 +16,4 @@ module "SentinelAlertRuleAlertScheduled" {
     #azurerm_log_analytics_solution_id = data.azurerm_log_analytics_workspace.example.workspace_id
     alert_rule_name ="${var.prefix}-rulescheduled01"
 }
+

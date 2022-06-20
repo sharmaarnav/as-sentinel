@@ -18,5 +18,5 @@ module "SentinelWatchlist" {
 
 
 output "watchlist_id" {
-  value = module.LogAnalyticsSolution.id
+  value = module.SentinelWatchlist.watchlist_id
 }

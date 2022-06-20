@@ -10,3 +10,4 @@ AzureActivity |
   make-series dcount(ResourceId) default=0 on EventSubmissionTimestamp in range(ago(7d), now(), 1d) by Caller
 QUERY
 }
+
