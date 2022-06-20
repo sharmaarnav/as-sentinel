@@ -1,2 +1,2 @@
 variable "prefix" {}
-variable "solution_id" {}
+variable "watchlist_id" {}

@@ -11,6 +11,7 @@ data "azurerm_log_analytics_workspace" "example" {
 module "SentinelConnectorO365" {
   source = "./SentinelConnectorO365"  
 
+  count = var.required_license_enabled ? 1 : 0
   o365_connector_name = "${var.prefix}-O365-connector"
   azurerm_log_analytics_solution_id = data.azurerm_log_analytics_workspace.example.id
 }

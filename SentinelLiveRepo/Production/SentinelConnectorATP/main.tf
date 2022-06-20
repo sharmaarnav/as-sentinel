@@ -11,6 +11,7 @@ data "azurerm_log_analytics_workspace" "example" {
 module "SentinelConnectorATP" {
   source = "./SentinelConnectorATP"
 
+  count = var.required_license_enabled ? 1 : 0
   atp_connector_name = "${var.prefix}-adv-atp"
   azurerm_log_analytics_solution_id = data.azurerm_log_analytics_workspace.example.id
 }

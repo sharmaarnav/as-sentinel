@@ -11,6 +11,7 @@ data "azurerm_log_analytics_workspace" "example" {
 module "SentinelConnectorAppSecurity" {
   source = "./SentinelConnectorAppSecurity"
   
+  count = var.required_license_enabled ? 1 : 0
   connector_app_security_name = "${var.prefix}-cas"
   azurerm_log_analytics_solution_id = data.azurerm_log_analytics_workspace.example.id
 }

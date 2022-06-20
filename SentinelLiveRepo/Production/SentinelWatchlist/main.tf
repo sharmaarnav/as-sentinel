@@ -8,9 +8,15 @@ data "azurerm_log_analytics_workspace" "example" {
   resource_group_name = data.azurerm_resource_group.examplerg.name
 }
 
+
 module "SentinelWatchlist" {
   source = "./SentinelWatchlist"
 
   watchlist_name = "${var.prefix}-watchlist"
   azurerm_log_analytics_solution_id = data.azurerm_log_analytics_workspace.example.id
+}
+
+
+output "watchlist_id" {
+  value = module.SentinelWatchlist.id
 }

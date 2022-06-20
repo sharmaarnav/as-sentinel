@@ -11,7 +11,7 @@ data "azurerm_log_analytics_workspace" "example" {
 module "SentinelAutomationRule" {
   source = "./SentinelAutomationRule"
   
-  automation_rule_name = "${var.prefix}-automation-rule"
+  automation_rule_name = "56094f72-ac3f-40e7-a0c0-47bd95f70336"
   azurerm_log_analytics_solution_id = data.azurerm_log_analytics_workspace.example.id
 }
 

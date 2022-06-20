@@ -11,6 +11,7 @@ data "azurerm_log_analytics_workspace" "example" {
 module "SentinelConnectorAAD" {
   source = "./SentinelConnectorAAD"
 
+    count = var.required_license_enabled ? 1 : 0
     connector_name = "${var.prefix}-aad"
     azurerm_log_analytics_solution_id = data.azurerm_log_analytics_workspace.example.id
 }

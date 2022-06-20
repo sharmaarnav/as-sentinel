@@ -3,14 +3,14 @@ include "root" {
 }
 
 dependencies {
-  paths = ["../ResourceGroup", "../LogAnalyticsWorkspace", "../SentinelWatchlist"]
+  paths = ["../ResourceGroup", "../LogAnalyticsWorkspace"]
 }
 
-dependency "LogAnalyticsSolution" {
-  config_path = "../LogAnalyticsSolution"
+dependency "SentinelWatchlist" {
+  config_path = "../SentinelWatchlist"
 }
 
 
 inputs = {
-  solution_id = dependency.LogAnalyticsSolution.outputs.solution_id
+  watchlist_id = dependency.SentinelWatchlist.outputs.watchlist_id
 }
