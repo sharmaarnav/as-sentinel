@@ -16,7 +16,3 @@ module "SentinelWatchlist" {
   azurerm_log_analytics_solution_id = data.azurerm_log_analytics_workspace.example.id
 }
 
-
-output "watchlist_id" {
-  value = module.SentinelWatchlist.id
-}
