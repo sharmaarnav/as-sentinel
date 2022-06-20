@@ -13,5 +13,5 @@ module "SentinelWatchlistItem" {
 
   watchlist_item_name = "${var.prefix}-watchlist-item"
   azurerm_log_analytics_solution_id = data.azurerm_log_analytics_workspace.example.id
-  azurerm_sentinel_watchlist_id = var.watchlist_id
+  azurerm_sentinel_watchlist_id = var.watchlistid
 }

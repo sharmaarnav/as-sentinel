@@ -12,5 +12,5 @@ dependency "SentinelWatchlist" {
 
 
 inputs = {
-  watchlist_id = dependency.SentinelWatchlist.outputs.watchlist_id
+  watchlist_id = dependency.SentinelWatchlist.outputs.watchlistid
 }

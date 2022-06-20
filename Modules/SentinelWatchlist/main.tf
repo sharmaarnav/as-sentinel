@@ -4,3 +4,7 @@ resource "azurerm_sentinel_watchlist" "example" {
   display_name               = var.watchlist_name
   item_search_key            = "Key"
 }
+
+output "watchlistid" {
+  value = azurerm_sentinel_watchlist.example.id
+}
