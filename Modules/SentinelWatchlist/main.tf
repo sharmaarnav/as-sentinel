@@ -5,3 +5,6 @@ resource "azurerm_sentinel_watchlist" "example" {
   item_search_key            = "Key"
 }
 
+output "watchlist_id" {
+  value = module.SentinelWatchlist.example.id
+}
