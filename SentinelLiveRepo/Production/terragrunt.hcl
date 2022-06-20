@@ -7,7 +7,7 @@ locals {
 }
 
 inputs = {
-    prefix = "production01"
+    prefix = "production02"
     location = "australiaeast"
     required_license_enabled = "0"
     
