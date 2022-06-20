@@ -5,6 +5,6 @@ resource "azurerm_sentinel_watchlist" "example" {
   item_search_key            = "Key"
 }
 
-output "watchlistid" {
+output "watchlist_id" {
   value = azurerm_sentinel_watchlist.example.id
 }
