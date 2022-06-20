@@ -9,8 +9,3 @@ dependencies {
 dependency "LogAnalyticsSolution" {
   config_path = "../LogAnalyticsSolution"
 }
-
-
-inputs = {
-  solution_id = dependency.LogAnalyticsSolution.outputs.solution_id
-}
